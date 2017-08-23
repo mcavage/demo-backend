@@ -1,0 +1,16 @@
+box: openjdk:8-jdk
+
+# defining the dev pipeline
+dev:
+  steps:
+    - script:
+      name: gradle bootRun
+      code: |
+        ./gradlew bootRun
+
+build:
+  steps:
+    - script:
+        name: gradle build
+        code: |
+          ./gradlew --full-stacktrace -q --project-cache-dir=$WERCKER_CACHE_DIR build
