@@ -22,6 +22,3 @@ docker-push:
         cmd: java -jar build/libs/gs-spring-boot-docker-0.1.0.jar
         ports: 8080
         working-dir: $WERCKER_ROOT
-        username: $DOCKERHUB_USERNAME
-        password: $DOCKERHUB_PASSWORD
-        repository: $DOCKERHUB_REPO
